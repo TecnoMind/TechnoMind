@@ -18,14 +18,14 @@
     button{
       margin-top: auto;
       margin-bottom: auto;
-      border-color: #0080FF;
+      border-color: $border-color;
     }
 
     .btn-primary-outline {
       background-color: transparent;
-      border-color: #0080FF;
+      border-color: $border-color;
       border-radius:50%;
-      background: #0080FF;
+      background: $border-color;
     }
     .btn-circle {
       width: 30px;
