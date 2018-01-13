@@ -8,8 +8,9 @@ import footer from '../commons/directive/src/footer';
 import header from '../commons/directive/src/header';
 import us from '../home/directive/src/us-section';
 import contact from '../home/directive/src/contact-section';
+import services from "./directive/src/services-section"
 
-export default angular.module('app.home', [uirouter, header, begin, us, contact, footer])
+export default angular.module('app.home', [uirouter, header, begin, us, contact, footer,services])
     .config(routing)
     .controller('HomeController', HomeController)
     .name;

@@ -1,0 +1,36 @@
+@import "../variables";
+.service {
+  .jumbotron{
+    background:$color-main ;
+  }
+  .rectangle {
+    height: $basic-size *5;
+    width: $basic-size *5;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background: $color-main;
+    border-radius:$border-radius *8;
+    button{
+      margin-top: auto;
+      margin-bottom: auto;
+      border-color: #0080FF;
+    }
+
+    .btn-primary-outline {
+      background-color: transparent;
+      border-color: #0080FF;
+      border-radius:50%;
+      background: #0080FF;
+    }
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+    }
+  }
+}

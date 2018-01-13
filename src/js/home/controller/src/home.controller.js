@@ -1,12 +1,6 @@
 export default class HomeController {
-
-
     constructor() {
-
-    }
-
-    changeName() {
-
+        this.showServices = false;
     }
 
 }
