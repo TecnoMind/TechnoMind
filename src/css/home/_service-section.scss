@@ -2,6 +2,8 @@
 .service {
   .jumbotron{
     background:$color-main ;
+    overflow: hidden;
+    transition: height 1s;
   }
   .rectangle {
     height: $basic-size *5;
@@ -15,6 +17,7 @@
     margin: 0 auto;
     background: $color-main;
     border-radius:$border-radius *8;
+
     button{
       margin-top: auto;
       margin-bottom: auto;
@@ -27,6 +30,7 @@
       border-radius:50%;
       background: $border-color;
     }
+
     .btn-circle {
       width: 30px;
       height: 30px;

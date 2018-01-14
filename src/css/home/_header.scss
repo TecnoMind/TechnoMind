@@ -3,21 +3,19 @@
 .navbar {
     margin-bottom: 0;
     padding-top: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Roboto", sans-serif;
     background: black !important;
-    transition: 0.5s;
 }
 
 /* Navbar-brand (icono) */
 
 .logo {
-    width: 60%;
+    width: 50%;
 }
 
 /* Navbar enlaces */
 
 .navbar ul li a {
-    font-size: 12px;
     width: 100%;
     border-radius: 10px;
     padding: 8px 10px 8px 10px;
@@ -31,14 +29,7 @@
 
 .navbar ul li a:hover {
     color: white !important;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* Clase para estilizar el "a" activo */
-
-.active {
-    background: #009C99;
+    font-weight: 600;
 }
 
 /*****************************/

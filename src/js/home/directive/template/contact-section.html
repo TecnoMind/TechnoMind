@@ -1,24 +1,36 @@
-<section id="contact-section">
+<section id="contact">
     <div class="contact-section">
         <div class="container">
-            <h4 class="title">Contáctanos</h4>
-            <form class="contact-form row">
-                <div class="form-field col-sm-12">
-                    <input id="name" class="input-text js-input" type="text" required>
-                    <label class="label" for="name">Nombre</label>
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2">
+                    <h2 class="title-contact js-wp-14">Contáctanos!</h2>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 control-label">Nombre</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Email" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Ejemplo@dominio.com">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="message" class="col-sm-2 control-label">Mensaje</label>
+                            <div class="col-sm-10">
+                                <textarea class="text-area" name="message" id="message" rows="3" cols="75" placeholder="Escribenos tu mensaje!"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-8 offset-2">
+                                <input type="submit" name="submit" class="btn btn-success send-btn" id="submit" value="Enviar">
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-field col-sm-12">
-                    <input id="email" class="input-text js-input" type="email" required>
-                    <label class="label" for="email">E-mail</label>
-                </div>
-                <div class="form-field col-sm-12">
-                    <input id="message" class="input-text js-input" type="text" required>
-                    <label class="label" for="message">Mensaje:</label>
-                </div>
-                <div class="form-field align-center">
-                    <input class="submit-btn" type="submit" value="Enviar">
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </section>

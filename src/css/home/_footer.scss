@@ -4,7 +4,8 @@
 
 footer {
     text-align: center;
-    background: #FFFAEA;
+    background: #000000;
+    color: #fff;
 }
 
 /* Texto lateral izquierdo */
@@ -31,17 +32,18 @@ footer .iconos li {
 /* Botón de regreso lateral derecho*/
 
 footer .fa-arrow-circle-o-up {
+    color: white;
     margin-top: 5px;
 }
 
 /* Cambiando color a los iconos */
 
 .fa-facebook-square {
-    color: #3b5998;
+    color: white;
 }
 
 /* Cambiando color a los iconos */
 
 .fa-instagram {
-    color: #517fa4;
+    color: white;
 }
