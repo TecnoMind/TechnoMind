@@ -34,6 +34,13 @@ footer .iconos li {
 footer .fa-arrow-circle-o-up {
     color: white;
     margin-top: 5px;
+    transition: .3s;
+}
+
+footer .fa-arrow-circle-o-up:hover {
+    color: $color-main;
+    margin-top: 5px;
+    transition: .3s;
 }
 
 /* Cambiando color a los iconos */

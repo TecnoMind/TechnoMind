@@ -1,0 +1,23 @@
+
+#section-parallax{
+  text-align: center;
+  background: url(/src/img/parallax-image.jpg) center repeat fixed;
+  background-size: cover;
+  padding: 140px 0;
+  color: white;
+}
+
+.parallax-boton{
+  background: transparent;
+  border: 1px solid #55B3CB !important;
+  color: white;
+  margin: 30px auto 0 auto;
+  width: 12rem;
+}
+
+.parallax-boton:hover{
+  background: #55B3CB !important;
+  border: 1px solid white !important;
+  margin: 30px auto 0 auto;
+  width: 12rem;
+}

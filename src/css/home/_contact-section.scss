@@ -4,6 +4,7 @@
 
 #contact .title-contact{
   text-align: center;
+  padding: 100px 0 50px 0;
 }
 
 #contact label{
@@ -18,15 +19,23 @@
 
 #contact .btn-success{
   background: rgb(85, 173, 203);
-  border: 1px solid transparent;
+  border: 1px solid black;
   border-radius: 0 !important;
-  color: #000 !important;
+  color: white !important;
   transition: .5s;
   width: 80px;
 }
 
 #contact .btn-success:hover{
   background: rgba(83, 183, 214, 0.94);
+  border: 1px solid white;
+  color: black !important;
+  transition: .5s;
+}
+
+#contact .btn-success:focus{
+  background: rgba(83, 183, 214, 0.94);
+  border: 1px solid black;
   transition: .5s;
 }
 
@@ -54,8 +63,11 @@
   padding: 5px 20px 20px 14px;
 }
 
-#contact input:focus, textarea:focus{
-  border: 0 solid transparent !important;
-  border-bottom-color: rgb(0, 0, 0) !important;
-  box-shadow: 0 1px 1px rgba(85, 173, 203, 0.5) inset, 0 0 1px rgba(85, 173, 203, 0.5) !important;
+#contact input:focus{
+  border: 2px solid $color-main !important;
+  box-shadow: 0 1px 1px rgba(85, 173, 203, 0.5) inset, 0 0 0px rgba(85, 173, 203, 0.5) !important;
+}
+
+#contact textarea:focus{
+  border: 2px solid $color-main !important;
 }

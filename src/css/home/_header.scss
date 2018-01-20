@@ -1,3 +1,5 @@
+@import "../variables";
+
 /* Contenedor navbar */
 
 .navbar {
@@ -13,23 +15,55 @@
     width: 50%;
 }
 
+/* Fondo dropdown */
+.navbar-nav > .nav-item > .btn-group .secundario {
+
+}
+
+.navbar-nav > .nav-item > .num-12 .btn-drop {
+  background-color: black !important;
+}
+
+.navbar-nav .nav-item .num-12 .btn-drop .dropdown-menu .dropdown-item{
+  background-color: black !important;
+}
 /* Navbar enlaces */
 
 .navbar ul li a {
-    width: 100%;
-    border-radius: 10px;
-    padding: 8px 10px 8px 10px;
-    text-align: center;
-    color: white !important;
+  color: white !important;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 10px;
+  text-align: center;
+  width: 100%;
+  transition: .5s;
 }
 
 /* Pseudoclases en los enlaces del navbar */
 
 /* Efecto al pasar encima del link */
 
-.navbar ul li a:hover {
-    color: white !important;
-    font-weight: 600;
+.navbar ul li a::after {
+  background: $color-main;
+  content: '';
+  display: block;
+  height: 1px;
+  transition: width .3s;
+  width: 0;
 }
 
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+/* Efecto tener el link activo */
+
+.navbar ul li a:active {
+  background: $color-main;
+  border-radius: 2px;
+  color: white !important;
+  padding: 8px 10px;
+  text-align: center;
+  width: 100%;
+}
 /*****************************/
