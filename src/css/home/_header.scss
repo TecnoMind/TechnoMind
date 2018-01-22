@@ -1,35 +1,7 @@
-/* Contenedor navbar */
-
-.navbar {
-    margin-bottom: 0;
-    padding-top: 10px;
-    font-family: "Roboto", sans-serif;
-    background: black !important;
+@import "../variables";
+.my-header {
+  header {
+    grid-area: $header-area;
+    background: $third-color;
+  }
 }
-
-/* Navbar-brand (icono) */
-
-.logo {
-    width: 50%;
-}
-
-/* Navbar enlaces */
-
-.navbar ul li a {
-    width: 100%;
-    border-radius: 10px;
-    padding: 8px 10px 8px 10px;
-    text-align: center;
-    color: white !important;
-}
-
-/* Pseudoclases en los enlaces del navbar */
-
-/* Efecto al pasar encima del link */
-
-.navbar ul li a:hover {
-    color: white !important;
-    font-weight: 600;
-}
-
-/*****************************/

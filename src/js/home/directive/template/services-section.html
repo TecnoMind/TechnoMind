@@ -4,7 +4,8 @@
         <hr class="my-4">
         <div class="rectangle">
             <button class="btn btn-primary-outline btn-sm btn-circle" ng-mouseover="home.showServices = !home.showServices">
-                <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                <i ng-if="!home.showServices" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                <i ng-if="home.showServices" class="fa fa-angle-double-up" aria-hidden="true"></i>
             </button>
         </div>
         <div class="container animate-show-hide" ng-show="home.showServices" >

@@ -1,0 +1,9 @@
+
+@import "../variables";
+.principal-container {
+  main {
+    display: grid;
+    grid-template-rows: repeat(10, [row-start]$basic-size[row-end]);
+    grid-template-areas: $header-area "begin" "footer";
+  }
+}
