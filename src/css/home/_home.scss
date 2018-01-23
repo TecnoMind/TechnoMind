@@ -1,9 +1,32 @@
 
 @import "../variables";
-.principal-container {
-  main {
+@import "header";
+
+
+  .principal-grid-content {
     display: grid;
-    grid-template-rows: repeat(10, [row-start]$basic-size[row-end]);
-    grid-template-areas: $header-area "begin" "footer";
+    grid-template-rows:  4fr 1fr 1fr;
+    background: $third-color;
+    grid-template-areas: 'header' 'other' 'tahOther';
+    grid-gap: 2px;
   }
-}
+
+  .principal-grid-content>div {
+    background: $secondary-color;
+  }
+
+  .item1 {
+    grid-area: header;
+  }
+
+  .item2{
+    grid-area: other;
+  }
+
+  .item3 {
+    grid-area: tahOther;
+  }
+
+
+
+
