@@ -1,31 +1,19 @@
 
 @import "../variables";
 @import "header";
-
-
+@import "begin-section";
+@import "../size-area-settings";
+@import "contact-section";
   .principal-grid-content {
     display: grid;
-    grid-template-rows:  4fr 1fr 1fr;
+    grid-template-rows:  [begin-header]$header-size[end-header begin-begin-section] $begin-section-size
+       [end-begin-section begin-contact-section] $contact-section-size [end-contact-section];
     background: $third-color;
-    grid-template-areas: 'header' 'other' 'tahOther';
+    grid-template-areas: $header-area $begin-section $contact-section;
     grid-gap: 2px;
   }
 
-  .principal-grid-content>div {
-    background: $secondary-color;
-  }
 
-  .item1 {
-    grid-area: header;
-  }
-
-  .item2{
-    grid-area: other;
-  }
-
-  .item3 {
-    grid-area: tahOther;
-  }
 
 
 
