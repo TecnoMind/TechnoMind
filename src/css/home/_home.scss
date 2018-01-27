@@ -4,12 +4,19 @@
 @import "begin-section";
 @import "../size-area-settings";
 @import "contact-section";
+@import "footer-section";
+@import "services-section";
+@import "us-section";
+@import "paralax-section";
   .principal-grid-content {
     display: grid;
     grid-template-rows:  [begin-header]$header-size[end-header begin-begin-section] $begin-section-size
-       [end-begin-section begin-contact-section] $contact-section-size [end-contact-section];
+       [end-begin-section begin-us-section] $us-section-size [end-us-section-size begin-paralax-section]$paralax-section-size
+        [end-paralax-section begin-services-section]$services-section-size
+        [end-services-section begin-contact-section]$contact-section-size [end-contact-section begin-footer-section]
+          $footer-section-size [end-footer-section];
     background: $third-color;
-    grid-template-areas: $header-area $begin-section $contact-section;
+    grid-template-areas: $header-area $begin-section $us-section $paralax-section $services-section $contact-section $footer-section ;
     grid-gap: 2px;
   }
 
