@@ -1,6 +1,10 @@
-@import "../variables";
+@import "../size-area-settings";
 .my-header {
   background: $secondary-color;
   grid-area: header;
-
+  header {
+    display: grid;
+    grid-template-columns: $basic-size $basic-size * 5 $basic-size;
+    grid-auto-rows: minmax($header-size, auto);
+  }
 }

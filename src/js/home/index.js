@@ -11,6 +11,7 @@ import services from "../home/directive/src/services-section";
 import footer from "../commons/directive/src/footer";
 import paralax from "../home/directive/src/paralax-section";
 
+
 export default angular.module('app.home', [uirouter, header, begin, contact, us, services, footer, paralax])
     .config(routing)
     .controller('HomeController', HomeController)
