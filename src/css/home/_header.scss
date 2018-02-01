@@ -1,10 +1,84 @@
 @import "../size-area-settings";
-.my-header {
-  background: $secondary-color;
-  grid-area: header;
-  header {
-    display: grid;
-    grid-template-columns: $basic-size $basic-size * 5 $basic-size;
-    grid-auto-rows: minmax($header-size, auto);
+@import "../mixins";
+
+/* Navbar completo */
+.navbar {
+  background: $third-color !important;
+  a{
+    cursor: pointer;
+  }
+  /* MENU RESPONSIVE */
+  .custom-toggler{
+    border-color: $secondary-color !important;
+    .navbar-collapse{
+
+      navbar-nav{
+      &:hover{
+      }
+      }
+    }
+
+    /* */
+    .navbar-toggler-icon{
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(85,179,203)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    }
+  }
+  /* Navbar-brand (icono) */
+  .logo {
+    width: 50%;
+  }
+  /* Conjunto de Links del Navbar */
+  .navbar-nav {
+     /* Links en el navbar */
+     .nav-item {
+       /* Propiedades del botón Dropdown */
+       .btn-drop {
+         @include navbar;
+         padding-top: 8px;
+      }
+       /* Fondo para el submenu del dropdown */
+       .dropdown-menu {
+          background: $third-color !important;
+          /* Fondo para cada elemento en el submenu */
+          .dropdown-item {
+            /* Estilos para cada enlace dentro del submenu */
+            @include navbar;
+            /* Efecto del subrayado */
+            &:after {
+              @include underLine;
+            }
+            /* Efecto del subrayado */
+            &:hover:after{
+              width: 100%;
+            }
+            &:active{
+              @include activeLink;
+            }
+         }
+      }
+      /* Estilos para cada enlace */
+      .nav-link{
+        /* Estilos para cada enlace dentro del submenu */
+        @include navbar;
+        /* Efecto del subrayado */
+        &:after{
+          @include underLine;
+        }
+        /* Efecto del subrayado */
+        &:hover:after{
+          width: 100%;
+        }
+        &:active{
+          /* Efecto al tener el Link Activo */
+          @include activeLink;
+        }
+      }
+    }
+    /* Efecto para abrir el submenú del Dropdown */
+    > .dropdown{
+      &:hover>.dropdown-menu{
+        display: block;
+      }
+    }
   }
 }

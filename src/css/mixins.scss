@@ -1,0 +1,30 @@
+@mixin navbar{
+  background-color: $third-color !important;
+  border: none;
+  color: white !important;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: -3px;
+  padding-bottom: 15px;
+  text-align: center;
+  transition: .5s;
+  width: 100%;
+}
+
+@mixin underLine{
+  background: $secondary-color;
+  content: '';
+  display: block;
+  height: 1px;
+  transition: width .3s;
+  width: 0;
+}
+
+@mixin activeLink{
+  background: $secondary-color;
+  border-radius: 2px;
+  color: white !important;
+  padding: 8px 10px;
+  text-align: center;
+  width: 100%;
+}
