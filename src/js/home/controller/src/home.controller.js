@@ -1,22 +1,29 @@
-export default class HomeController {
-    constructor($location, $anchorScroll) {
+
+const timeOut = new WeakMap();
+const location = new WeakMap();
+const anchorScroll = new WeakMap();
+class HomeController {
+    constructor($timeout,$location, $anchorScroll) {
         this.showServices = false;
-        this.$location = $location;
-        this.$anchorScroll = $anchorScroll;
+        timeOut.set(this,$timeout);
+        location.set(this,$location);
+        anchorScroll.set(this,$anchorScroll);
     }
 
     navigateOnSections(section) {
 
-        var newHash = section;
-        if (this.$location.hash() !== newHash) {
-            // set the $location.hash to `newHash` and
-            // $anchorScroll will automatically scroll to it
-            this.$location.hash(section);
+        if (location.get(this).hash() !== section) {
+            location.get(this).hash(section);
+            console.log(location.get(this).hash());
         } else {
-            // call $anchorScroll() explicitly,
-            // since $location.hash hasn't changed
-            this.$anchorScroll();
+            console.log(location.get(this).hash());
+            timeOut.get(this)(() => {
+                anchorScroll.get(this)();
+            },1000);
+
         }
     }
 
 }
+HomeController.$inject = ['$timeout', '$location','$anchorScroll'];
+export default HomeController;
