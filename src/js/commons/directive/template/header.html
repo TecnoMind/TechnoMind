@@ -4,12 +4,12 @@
             <!-- Navbar brand hace referencia exclusivamente al logo -->
             <a class="navbar-brand" href="#"><img src="../../../../img/logo2.svg" alt="Logo TechnoMind" class="logo"></a>
             <!-- Boton en modo responsive -->
-            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                <!-- Cuadrito del menú responsive -->
+                <span class="openn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
             </button>
             <!-- Propiedades del navbar -->
-            <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <!-- Lista de Items en el navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Item en el navbar -->
@@ -41,5 +41,16 @@
                 </ul>
             </div>
         </div>
+    </nav>
+    <nav id="mySidenav" class="sidenav">
+        <!-- "x" -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Inicio</a>
+        <a href="#">Desarrollo móvil</a>
+        <a href="#">Desarrollo web</a>
+        <a href="#">Desarrollo escritorio</a>
+        <a href="#">Páginas web</a>
+        <a href="#">Marketing digital</a>
+        <a href="#">Contacto</a>
     </nav>
 </header>

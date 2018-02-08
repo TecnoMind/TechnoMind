@@ -15,7 +15,7 @@
         [end-paralax-section begin-services-section]$services-section-size
         [end-services-section begin-contact-section]$contact-section-size [end-contact-section begin-footer-section]
           $footer-section-size [end-footer-section];
-    background: $third-color;
+    background: red;
     grid-template-areas: $header-area $begin-section $us-section $paralax-section $services-section $contact-section $footer-section ;
     grid-gap: 2px;
   }

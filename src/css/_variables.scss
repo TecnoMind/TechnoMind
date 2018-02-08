@@ -2,3 +2,7 @@ $basic-size: 1fr;
 $primary-color: #F2F2F2;
 $secondary-color: #55b3cb;
 $third-color: #000000;
+
+$smartphone: "(max-width: 480px)";
+$tablets: "(min-width: 576px) and (max-width: 767px)";
+$desktop: "(min-width: 1024px)";

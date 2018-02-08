@@ -1,27 +1,16 @@
 @import "../size-area-settings";
-@import "../mixins";
+@import "../mixin-navbar";
+
+.openn {
+  color: $secondary-color;
+}
 
 /* Navbar completo */
 .navbar {
   background: $third-color !important;
-  a{
-    cursor: pointer;
-  }
   /* MENU RESPONSIVE */
   .custom-toggler{
     border-color: $secondary-color !important;
-    .navbar-collapse{
-
-      navbar-nav{
-      &:hover{
-      }
-      }
-    }
-
-    /* */
-    .navbar-toggler-icon{
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(85,179,203)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-    }
   }
   /* Navbar-brand (icono) */
   .logo {
@@ -33,6 +22,15 @@
      .nav-item {
        /* Propiedades del botón Dropdown */
        .btn-drop {
+         /* UNA FORMA DE HACER LA MEDIA */
+         /*@media #{$tablets}{
+           font-size: 11px;
+         }*/
+         /* OTRA FORMA DE HACER LA MEDIA */
+         /* Media Query para tabletas */
+         @include mixTablets{
+           font-size: 11px;
+         }
          @include navbar;
          padding-top: 8px;
       }
@@ -41,6 +39,12 @@
           background: $third-color !important;
           /* Fondo para cada elemento en el submenu */
           .dropdown-item {
+            /* Media Query para tabletas */
+            @include mixTablets{
+              font-size: 11px;
+              /* Restauramos estos valores a los predefinidos */
+              padding: 8px 10px;
+            }
             /* Estilos para cada enlace dentro del submenu */
             @include navbar;
             /* Efecto del subrayado */
@@ -51,13 +55,21 @@
             &:hover:after{
               width: 100%;
             }
+            /* Pseudo clase del link activo */
             &:active{
               @include activeLink;
+              @include mixTablets {
+                padding: 10px 10px !important;
+              }
             }
          }
       }
       /* Estilos para cada enlace */
       .nav-link{
+        /* Media Query para tabletas */
+        @include mixTablets{
+          font-size: 11px;
+        }
         /* Estilos para cada enlace dentro del submenu */
         @include navbar;
         /* Efecto del subrayado */
@@ -68,9 +80,15 @@
         &:hover:after{
           width: 100%;
         }
-        &:active{
+        &:active {
           /* Efecto al tener el Link Activo */
           @include activeLink;
+          /* Media para tabletas */
+          @include mixTablets {
+            background: $secondary-color !important;
+            font-size: 11px;
+            padding: 8px 10px;
+          }
         }
       }
     }
@@ -80,5 +98,37 @@
         display: block;
       }
     }
+  }
+}
+/* Menú lateral */
+.sidenav{
+  background-color: $third-color;
+  height: 100%;
+  overflow-x: hidden;
+  padding-top: 60px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+  width: 0;
+  z-index: 1;
+  a{
+    color: $secondary-color;
+    display: block;
+    font-size: 20px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover{
+      color: $secondary-color;
+    }
+  }
+  .closebtn{
+    color: white;
+    font-size: 36px;
+    margin-left: 50px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
   }
 }
