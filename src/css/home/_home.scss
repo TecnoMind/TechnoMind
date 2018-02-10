@@ -8,16 +8,30 @@
 @import "services-section";
 @import "us-section";
 @import "paralax-section";
+
   .principal-grid-content {
     display: grid;
-    grid-template-rows:  [begin-header]$header-size[end-header begin-begin-section] $begin-section-size
+
+    margin: 0 auto;
+    grid-gap: 1px;
+    background: #d991ff;
+    grid-template-areas:
+            $header-area
+            $begin-section
+            $us-section
+            $paralax-section
+            $services-section
+            $contact-section
+            $footer-section;
+
+    /*grid-template-rows:  [begin-header]$header-size[end-header begin-begin-section] $begin-section-size
        [end-begin-section begin-us-section] $us-section-size [end-us-section-size begin-paralax-section]$paralax-section-size
         [end-paralax-section begin-services-section]$services-section-size
         [end-services-section begin-contact-section]$contact-section-size [end-contact-section begin-footer-section]
           $footer-section-size [end-footer-section];
     background: red;
     grid-template-areas: $header-area $begin-section $us-section $paralax-section $services-section $contact-section $footer-section ;
-    grid-gap: 2px;
+    grid-gap: 2px;*/
   }
 
 

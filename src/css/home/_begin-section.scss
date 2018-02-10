@@ -1,32 +1,27 @@
 @import "../variables";
-.begin-section {
-  background: $secondary-color;
-  grid-area: begin;
-}
 
-#begin{
-  background: rgba(0,0,0,.50);
-}
-
-.carousel-inner img {
-  height: auto;
-  max-height: 600px;
-  width: 100%;
-  position: relative;
-}
-
-.carousel-caption{
-  position:absolute;
-  top: 35%;
-}
-
-.carousel-caption h2{
-  font-size: 100px;
-  background: rgba(0, 0, 0, 0.70);
-  border-radius: 1rem;
-}
-
-.carousel-caption p{
-  font-size: 40px;
-  background: rgba(0, 0, 0, 0.70);
+#begin-section{
+  .begin-section {
+    .carousel-inner{
+      img {
+        height: auto;
+        max-height: 600px;
+        position: relative;
+        width: 100%;
+      }
+      .carousel-caption {
+        position: absolute;
+        top: 35%;
+        h2{
+          background: rgba(0, 0, 0, 0.70);
+          border-radius: 1rem;
+          font-size: 100px;
+        }
+        p{
+          background: rgba(0, 0, 0, 0.70);
+          font-size: 30px;
+        }
+      }
+    }
+  }
 }

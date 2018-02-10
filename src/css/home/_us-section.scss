@@ -1,6 +1,60 @@
 @import "../variables";
-.us-section {
-  background: $secondary-color;
-  grid-area: us;
 
+#us-section{
+  background: white;
+  padding-bottom: 80px;
+  text-align: center;
+  .us-section {
+    .title-row{
+      .title-what-we-do{
+        background: $primary-color;
+        padding: 100px 0;
+        h1{
+          font-size: 30px;
+          font-weight: 700;
+          padding-bottom: 50px;
+          .underline_color_main{
+            text-decoration: underline $secondary-color;
+          }
+        }
+        p{
+          font-size: 15px;
+          text-align: center;
+        }
+      }
+    }
+  .container{
+      .our-serves-title {
+        p {
+          font-size: 25px;
+          padding-top: 75px;
+        }
+      }
+      .us-row{
+        padding-top: 100px;
+        .adjustable-services{
+          margin-bottom: 20px;
+          .us-services{
+            box-shadow: 0 0 4px 0 #e6e6e6;
+            height: 100%;
+            transition: .5s;
+            i{
+              padding: 10% 15% 15% 15%;
+            }
+            p{
+              padding: 10% 0 15% 0;
+            }
+            .btn-know-more{
+              margin-bottom: 10%;
+            }
+            &:hover{
+              box-shadow: 0 0 5px 1px $secondary-color;
+              transition: .5s;
+              height: 100%;
+            }
+          }
+        }
+      }
+  }
+  }
 }
