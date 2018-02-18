@@ -1,13 +1,22 @@
 const path = require('path');
+var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const extractPlugin = new ExtractTextPlugin(
 	{ filename: '[name].[hash].css'});
-
+var helpers = require('./helpers');
 module.exports={
 
-   entry: './src/app.js',
+   entry:{
+       'polyfills': './src/polyfills.ts',
+       'vendor': './src/vendor.ts',
+       'app': './src/main.ts'
+   },
+
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
 
     output:{
         path: path.resolve(__dirname, 'dist'),
@@ -17,17 +26,13 @@ module.exports={
      module: {
     	rules: [
       		{
-				test: /\.js$/,
-				include: path.resolve(__dirname, 'src'),
-				exclude: /node_modules/,
-				use: [{
-				  loader: 'babel-loader',
-				  options: {
-					presets: [
-					  ['es2015']
-					]
-				  }
-				}]
+				test: /\.ts$/,
+                loaders: [
+                    {
+                        loader: 'awesome-typescript-loader',
+                        options: { configFileName: helpers.root('src', 'tsconfig.json') }
+                    } , 'angular2-template-loader'
+                ]
       		},
             {
 				test: /\.(html)$/,
@@ -87,7 +92,15 @@ module.exports={
     },
 
     plugins: [
-    	new HtmlWebpackPlugin({
+        new webpack.ContextReplacementPlugin(
+
+            helpers.root('./src'), // location of your src
+            {} // a map of your routes
+        ),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'vendor', 'polyfills']
+        }),
+        new HtmlWebpackPlugin({
 			template: __dirname + '/src/index.html'
     	}),
     	extractPlugin,
