@@ -6,21 +6,25 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const extractPlugin = new ExtractTextPlugin(
 	{ filename: '[name].[hash].css'});
 var helpers = require('./helpers');
+
+
+
 module.exports={
 
-   entry:{
-       'polyfills': './src/polyfills.ts',
-       'vendor': './src/vendor.ts',
-       'app': './src/main.ts'
-   },
+    entry: {
+        'polyfills': './src/polyfills.ts',
+        'vendor': './src/vendor.ts',
+        'app': './src/main.ts'
+    },
 
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
     },
 
     output:{
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[hash].js'
+        filename: '[name].[hash].js',
+        chunkFilename: '[id].[hash].chunk.js'
     },
 
      module: {
@@ -30,8 +34,11 @@ module.exports={
                 loaders: [
                     {
                         loader: 'awesome-typescript-loader',
-                        options: { configFileName: helpers.root('src', 'tsconfig.json') }
-                    } , 'angular2-template-loader'
+                        options: {
+                            configFileName: helpers.root('src', 'tsconfig.json')
+                        }
+                    } ,
+                    'angular2-template-loader'
                 ]
       		},
             {
@@ -93,12 +100,11 @@ module.exports={
 
     plugins: [
         new webpack.ContextReplacementPlugin(
-
-            helpers.root('./src'), // location of your src
-            {} // a map of your routes
+            /angular(\\|\/)core(\\|\/)(@angular|esm5)/,
+            helpers.root('./src') // location of your src
         ),
         new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor', 'polyfills']
+            name: ['app','vendor', 'polyfills']
         }),
         new HtmlWebpackPlugin({
 			template: __dirname + '/src/index.html'
