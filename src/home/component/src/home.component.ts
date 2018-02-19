@@ -1,9 +1,7 @@
 import {Component} from "@angular/core";
-//import "bootstrap_css";
-//import "../../util/rxjs-operators.ts";
-
+import "../../../../node_modules/bootstrap/dist/css/bootstrap.css"
 @Component({
     selector: 'my-app',
-    template: require('../template/home.component.html')
+    template: require('../template/home.component.html'),
 })
 export class HomeComponent { }

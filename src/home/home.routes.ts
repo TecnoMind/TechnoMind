@@ -7,10 +7,7 @@ import {HomeComponent} from "./component/src/home.component"
 // Route config let's you map routes to components
 const routes: Routes = [
     // map '/home' to the home screen
-    {
-        path: 'home',
-        component: HomeComponent,
-    }
+    { path: 'home',component: HomeComponent}
 ];
 
 export const routing = RouterModule.forRoot(routes);
