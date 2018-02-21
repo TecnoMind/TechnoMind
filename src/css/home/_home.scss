@@ -5,16 +5,16 @@
 @import "../size-area-settings";
 @import "contact-section";
 @import "footer-section";
-@import "services-section";
+@import "technologies-section";
 @import "us-section";
-@import "paralax-section";
+@import "pharalax-section";
 
   .principal-grid-content {
     display: grid;
 
     margin: 0 auto;
     grid-gap: 1px;
-    background: #d991ff;
+    background: none;
     grid-template-areas:
             $header-area
             $begin-section

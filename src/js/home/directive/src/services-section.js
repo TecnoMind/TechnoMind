@@ -1,5 +1,5 @@
 import angular from 'angular';
-import template from '../template/services-section.html';
+import template from '../template/technologies-section.html';
 
 /**
  * Directive for inject  service section

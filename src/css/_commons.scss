@@ -3,4 +3,8 @@ html,body{
   padding: 0px;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
+  //Text Highlight color
+  ::-moz-selection {
+    background: rgba(48, 151, 184, 0.66);
+  }
 }
