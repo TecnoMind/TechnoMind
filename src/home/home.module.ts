@@ -7,6 +7,7 @@ import {HomeComponent} from "./component/src/home.component";
 import {BeginComponent} from "./component/src/begin.component";
 import { ParticlesModule } from 'angular-particle';
 
+import {HeaderComponent} from "./component/src/header.component";
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import { ParticlesModule } from 'angular-particle';
     ],
     declarations: [
        HomeComponent,
-       BeginComponent
+       BeginComponent,
+       HeaderComponent
     ],
     entryComponents: [
 

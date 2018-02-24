@@ -1,0 +1,56 @@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-inverse fixed-top">
+        <div class="container">
+            <!-- Navbar brand hace referencia exclusivamente al logo -->
+            <a class="navbar-brand" href="#"><img src="../../../img/logo2.svg" alt="Logo TechnoMind" class="logo"></a>
+            <!-- Boton en modo responsive -->
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                <!-- Cuadrito del menú responsive -->
+                <span class="openn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </button>
+            <!-- Propiedades del navbar -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <!-- Lista de Items en el navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Item en el navbar -->
+                    <li class="nav-item">
+                        <!-- Link del navbar -->
+                        <a class="nav-link" ui-sref="home">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <!-- Botón DropDown -->
+                        <button class="btn btn-secondary dropdown-toggle btn-drop" data-hover="dropdown" href="#"
+                                role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"> Desarrollo
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item">Desarrollo móvil</a>
+                            <a class="dropdown-item">Desarrollo web</a>
+                            <a class="dropdown-item">Desarrollo escritorio</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home">Páginas web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home">Marketing digital</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav id="mySidenav" class="sidenav">
+        <!-- "x" -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Inicio</a>
+        <a href="#">Desarrollo móvil</a>
+        <a href="#">Desarrollo web</a>
+        <a href="#">Desarrollo escritorio</a>
+        <a href="#">Páginas web</a>
+        <a href="#">Marketing digital</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>

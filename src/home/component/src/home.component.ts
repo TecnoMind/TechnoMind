@@ -5,4 +5,6 @@ import "../../../css/main.scss"
     selector: 'my-app',
     template: require('../template/home.component.html'),
 })
-export class HomeComponent { }
+export class HomeComponent {
+
+}
