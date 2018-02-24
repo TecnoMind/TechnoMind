@@ -5,16 +5,15 @@ import {NgbModule, NgbTypeaheadModule} from "@ng-bootstrap/ng-bootstrap";
 import {routing} from "./home.routes";
 import {HomeComponent} from "./component/src/home.component";
 import {BeginComponent} from "./component/src/begin.component";
-import { ParticlesModule } from 'angular-particle';
-
 import {HeaderComponent} from "./component/src/header.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
+        BrowserAnimationsModule,
         NgbModule.forRoot(),
-        ParticlesModule,
         NgbTypeaheadModule.forRoot(),
         routing
     ],

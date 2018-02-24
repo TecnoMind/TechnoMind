@@ -8,3 +8,11 @@ html,body{
     background: rgba(48, 151, 184, 0.66);
   }
 }
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
