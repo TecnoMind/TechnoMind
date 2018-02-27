@@ -6,6 +6,11 @@ import {routing} from "./home.routes";
 import {HomeComponent} from "./component/src/home.component";
 import {BeginComponent} from "./component/src/begin.component";
 import {HeaderComponent} from "./component/src/header.component";
+import {UsComponent} from "./component/src/us.component";
+import {ParallaxComponent} from "./component/src/parallax.component";
+import {TechnologiesComponent} from "./component/src/technologies.component";
+import {ContactComponent} from "./component/src/contact.component";
+import {FooterComponent} from "./component/src/footer.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -20,7 +25,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     declarations: [
        HomeComponent,
        BeginComponent,
-       HeaderComponent
+       HeaderComponent,
+       UsComponent,
+       ParallaxComponent,
+       TechnologiesComponent,
+       ContactComponent,
+       FooterComponent
+
     ],
     entryComponents: [
 

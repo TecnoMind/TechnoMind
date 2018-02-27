@@ -1,12 +1,12 @@
+@import "../size-area-settings";
 @import "../variables";
 @import "header";
 @import "begin-section";
-@import "../size-area-settings";
 @import "contact-section";
 @import "footer-section";
-//@import "technologies-section";
+@import "technologies-section";
 @import "us-section";
-//@import "pharalax-section";
+@import "paralax-section";
 
 .principal-grid-content {
   display: grid;
@@ -18,7 +18,7 @@
           $header-area
           $begin-section
           $us-section
-          $paralax-section
+          $parallax-section
           $services-section
           $contact-section
           $footer-section;

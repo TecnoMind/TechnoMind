@@ -1,6 +1,39 @@
 @import "../variables";
-.my-footer {
-  background: $secondary-color;
-  grid-area: footer;
 
+footer {
+  background: #434343;
+  border-top: 5px solid $secondary-color;
+  color: #fff;
+  font-size: 14.5px;
+  padding-top: 50px;
+  text-align: left;
+  .flecha{
+    position: absolute;
+    top: -101px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Texto lateral izquierdo */
+  .texto-footer{
+    font-size: 12px;
+  }
+  /* Lista categoría */
+  .categorías{
+    list-style: none;
+    text-align: left;
+    li {
+      display: block;
+      padding-top: 5px;
+    }
+  }
+  /* Iconos derecha */
+  .iconos {
+    list-style: none;
+    /* Lista de iconos centrales */
+    li {
+      display: inline-block;
+      padding-top: 15px;
+      padding-right: 25px;
+    }
+  }
 }

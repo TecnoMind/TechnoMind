@@ -2,16 +2,12 @@
 
 #begin-section{
   .begin-section {
-    .carousel-inner{
-      img {
-        height: auto;
-        max-height: 600px;
-        position: relative;
-        width: 100%;
-      }
-      .carousel-caption {
+      .caption {
+        color: white;
         position: absolute;
-        top: 35%;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
         h2{
           background: rgba(0, 0, 0, 0.70);
           border-radius: 1rem;
@@ -20,8 +16,17 @@
         p{
           background: rgba(0, 0, 0, 0.70);
           font-size: 30px;
+          text-align: center;
         }
       }
-    }
+      .background {
+        background: url(/src/img/dark-stars2.jpg) center;
+        background-size: cover;
+        height: auto;
+        max-height: 600px;
+        position: relative;
+        width: 100%;
+        z-index: -1;
+      }
   }
 }

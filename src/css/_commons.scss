@@ -1,18 +1,10 @@
 html,body{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   //Text Highlight color
   ::-moz-selection {
     background: rgba(48, 151, 184, 0.66);
   }
-}
-
-.background {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  z-index: 0;
 }

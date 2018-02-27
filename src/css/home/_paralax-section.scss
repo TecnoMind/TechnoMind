@@ -1,6 +1,23 @@
 @import "../variables";
-.paralax-section {
-  background: $secondary-color;
-  grid-area: paralax;
 
+#parallax-section{
+  background: url(/src/img/parallax-image.jpg) center repeat fixed;
+  background-size: cover;
+  color: white;
+  padding: 140px 0;
+  text-align: center;
+  .parallax-section{
+    .parallax-boton{
+      background: transparent;
+      border: 1px solid $secondary-color !important;
+      color: white;
+      margin: 30px auto 0 auto;
+      width: 12rem;
+      &:hover{
+        background: $secondary-color !important;
+        border: 1px solid white !important;
+        color: white;
+      }
+    }
+  }
 }

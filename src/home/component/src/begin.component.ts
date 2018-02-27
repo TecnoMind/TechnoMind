@@ -11,7 +11,7 @@ export class BeginComponent implements OnInit{
         init
         ({
             selector: '.background',
-            color: ['#DA0463', '#404B69', '#DBEDF3'],
+            color: ['#fbfbfb', '#539eb8', '#fbfbfb'],
             connectParticles: true
         });
     }
