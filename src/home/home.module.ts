@@ -12,6 +12,8 @@ import {TechnologiesComponent} from "./component/src/technologies.component";
 import {ContactComponent} from "./component/src/contact.component";
 import {FooterComponent} from "./component/src/footer.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
     imports: [
@@ -20,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         BrowserAnimationsModule,
         NgbModule.forRoot(),
         NgbTypeaheadModule.forRoot(),
+        HttpClientModule,
+        AngularSvgIconModule,
         routing
     ],
     declarations: [
