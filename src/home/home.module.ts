@@ -11,10 +11,11 @@ import {ParallaxComponent} from "./component/src/parallax.component";
 import {TechnologiesComponent} from "./component/src/technologies.component";
 import {ContactComponent} from "./component/src/contact.component";
 import {FooterComponent} from "./component/src/footer.component";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { AngularSvgIconModule } from 'angular-svg-icon';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
+import {AngularSvgIconModule} from 'angular-svg-icon';
+import {LoadingComponent} from "./component/src/loading.component";
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 @NgModule({
     imports: [
         BrowserModule,
@@ -24,6 +25,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
         NgbTypeaheadModule.forRoot(),
         HttpClientModule,
         AngularSvgIconModule,
+        Ng4LoadingSpinnerModule.forRoot(),
         routing
     ],
     declarations: [
@@ -34,7 +36,8 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
        ParallaxComponent,
        TechnologiesComponent,
        ContactComponent,
-       FooterComponent
+       FooterComponent,
+       LoadingComponent
 
     ],
     entryComponents: [

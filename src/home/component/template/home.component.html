@@ -1,4 +1,4 @@
-<div class="principal-grid-content">
+<div *ngIf="loading" class="principal-grid-content">
     <my-header></my-header>
     <begin></begin>
     <us></us>
@@ -6,4 +6,8 @@
     <technologies></technologies>
     <contact></contact>
     <my-footer></my-footer>
+</div>
+<div *ngIf="!loading">
+    <loading></loading>
+
 </div>
