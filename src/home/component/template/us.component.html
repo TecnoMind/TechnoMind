@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 our-serves-title">
                     <p>Nuestros <b>servicios</b> están destinados a cualquier ámbito en el que nuestros
@@ -19,45 +19,59 @@
                 </div>
             </div>
             <div class="row us-row">
-                <div class="col-sm-6 col-md-6 col-lg-3 adjustable-services">
-                    <div class="col-sm-12 us-services">
+                <div class="col-sm-12 botones">
+                    <button (click)="softwareButton()"><svg-icon src="src/svg/software.svg"></svg-icon></button>
+                    <button (click)="consultoryButton()"><svg-icon src="src/svg/computadora.svg"></svg-icon></button>
+                    <button (click)="mobileButton()"><svg-icon src="src/svg/celular.svg"></svg-icon></button>
+                    <button (click)="designButton()"><svg-icon src="src/svg/dibujo.svg"></svg-icon></button>
+                </div>
+            </div>
+            <div class="row us-services-row" *ngIf="showSelected">
+                <div class="col-sm-6 texto">
+                    <div class="container">
                         <br>
-                        <svg-icon src="src/svg/software.svg"></svg-icon>
-                        <h5> <b>Desarrollo de Software</b> </h5>
-                        <p>En TechnoMind nos preocupamos por que nuestros clientes puedan realizar sus tareas con ayuda de la
-                            tecnología.</p>
-                        <button type="button" class="btn btn-info btn-know-more">Saber más</button>
+                        <p><b>Desarrollo de Software</b></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequuntur impedit magnam, molestiae pariatur quidem reiciendis ullam! Ad doloribus dolorum exercitationem repellat. A exercitationem, explicabo neque quis sapiente velit vitae!
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 adjustable-services">
-                    <div class="col-sm-12 us-services">
+                <div class="col-sm-6 imagen">
+                    <img src="/src/img/software.jpg" alt="">
+                </div>
+            </div>
+            <div class="row us-services-row" *ngIf="showSelected2">
+                <div class="col-sm-6 texto">
+                    <div class="container">
                         <br>
-                        <svg-icon src="src/svg/computadora.svg"></svg-icon>
-                        <h5><b>Consultoría en Área TI</b></h5>
-                        <p>Asesoramiento e implementación de equipos de cómputo en el área Tecnologías de la
-                            Información y seguridad de redes.</p>
-                        <button type="button" class="btn btn-info btn-know-more">Saber más</button>
+                        <p><b>Consultoria en Tecnologías de la Información</b></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequuntur impedit magnam, molestiae pariatur quidem reiciendis ullam! Ad doloribus dolorum exercitationem repellat. A exercitationem, explicabo neque quis sapiente velit vitae!
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 adjustable-services">
-                    <div class="col-sm-12 us-services">
+                <div class="col-sm-6 imagen">
+                    <img src="/src/img/IT.jpeg" alt="">
+                </div>
+            </div>
+            <div class="row us-services-row" *ngIf="showSelected3">
+                <div class="col-sm-6 texto">
+                    <div class="container">
                         <br>
-                        <svg-icon src="src/svg/celular.svg"></svg-icon>
-                        <h5><b>Aplicaciones Móviles</b></h5>
-                        <p>El desarrollo de aplicaciones para Smartphones es una inversión que tus clientes llevarán a
-                            cualquier lugar que vayan.</p>
-                        <button type="button" class="btn btn-info btn-know-more">Saber más</button>
+                        <p><b>Desarrollo de aplicaciones móviles</b></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequuntur impedit magnam, molestiae pariatur quidem reiciendis ullam! Ad doloribus dolorum exercitationem repellat. A exercitationem, explicabo neque quis sapiente velit vitae!
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 adjustable-services">
-                    <div class="col-sm-12 us-services">
+                <div class="col-sm-6 imagen">
+                    <img src="/src/img/mobile.jpg" alt="">
+                </div>
+            </div>
+            <div class="row us-services-row" *ngIf="showSelected4">
+                <div class="col-sm-6 texto">
+                    <div class="container">
                         <br>
-                        <svg-icon src="src/svg/dibujo.svg"></svg-icon>
-                        <h5><b>Desarrollo y Diseño Web</b></h5>
-                        <p>Nuestros diseños se basan en el modelo responsive, por lo que serás bien visto desde cualquier
-                            dispositivo.</p>
-                        <button type="button" class="btn btn-info btn-know-more">Saber más</button>
+                        <p><b>Desarrollo y diseño de sitios web</b></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequuntur impedit magnam, molestiae pariatur quidem reiciendis ullam! Ad doloribus dolorum exercitationem repellat. A exercitationem, explicabo neque quis sapiente velit vitae!
                     </div>
+                </div>
+                <div class="col-sm-6 imagen">
+                    <img src="/src/img/design.jpeg" alt="">
                 </div>
             </div>
         </div>
