@@ -1,53 +1,39 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {trigger, transition, animate, state, style,keyframes} from "@angular/animations";
 
 @Component({
     selector: 'us',
     template: require('../template/us.component.html'),
     animations: [
-
-        trigger('labelIn', [
-            transition('inactive => active', animate('1000ms ease-in')),
-        ]),
+        trigger('label', [
+            state('show', style({transform: 'translateX(0)'})),
+            transition('void => *', [
+                style({transform: 'translateX(-100%)'}),
+                animate(100)
+            ]),
+            transition('* => void', [
+                animate(100, style({transform: 'translateX(100%)'}))
+            ])
+        ])
     ]
 })
 
-export class UsComponent {
-    showSelected: boolean;
-    showSelected2: boolean;
-    showSelected3: boolean;
-    showSelected4: boolean;
+export class UsComponent implements OnInit{
+
+    private selectedArea: string = "software";
+    private state:string;
 
     constructor() {
-        this.showSelected = true;
-        this.showSelected2 = false;
-        this.showSelected3 = false;
-        this.showSelected4 = false;
+
     }
 
-    softwareButton() {
-        this.showSelected = true;
-        this.showSelected2 = false;
-        this.showSelected3 = false;
-        this.showSelected4 = false;
-    }
-    consultoryButton() {
-        this.showSelected = false;
-        this.showSelected2 = true;
-        this.showSelected3 = false;
-        this.showSelected4 = false;
-    }
-    mobileButton() {
-        this.showSelected = false;
-        this.showSelected2 = false;
-        this.showSelected3 = true;
-        this.showSelected4 = false;
-    }
-    designButton() {
-        this.showSelected = false;
-        this.showSelected2 = false;
-        this.showSelected3 = false;
-        this.showSelected4 = true;
+    public selectArea(newSelected: string) {
+        this.selectedArea = newSelected;
     }
 
+    ngOnInit(): void {
+        setTimeout( ()=> {
+           this.state = "show"
+        },500);
+    }
 }
