@@ -10,11 +10,12 @@ import {FooterComponent} from "./component/src/footer.component";
 import {AppComponent} from "./component/src/app.component";
 import {CommonsModule} from "../commons/commons.module";
 import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
     imports: [
         CommonsModule,
-        HttpClientModule
+        HttpClientModule,
     ],
     declarations: [
        HomeComponent,
@@ -25,7 +26,8 @@ import {HttpClientModule} from "@angular/common/http";
        TechnologiesComponent,
        ContactComponent,
        FooterComponent,
-       AppComponent
+       AppComponent,
+
     ],
     bootstrap: [AppComponent],
 

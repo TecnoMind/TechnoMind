@@ -6,4 +6,5 @@ console.info('UI app.environment:', process.env.ENV);
 if (process.env.ENV === 'production') {
     enableProdMode();
 }
-platformBrowserDynamic().bootstrapModule(AppModule);
+setTimeout(() =>
+        platformBrowserDynamic().bootstrapModule(AppModule), 2000);

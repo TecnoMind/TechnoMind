@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 
 @Component({
     selector: 'loading',
-    template: require('../template/loading.component.html'),
+    template: require('../template/loading.component.html')
 })
 export class LoadingComponent implements OnInit {
 
