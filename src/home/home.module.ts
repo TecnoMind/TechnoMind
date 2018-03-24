@@ -10,12 +10,13 @@ import {FooterComponent} from "./component/src/footer.component";
 import {AppComponent} from "./component/src/app.component";
 import {CommonsModule} from "../commons/commons.module";
 import {HttpClientModule} from "@angular/common/http";
-import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
+import { ScrollToModule } from 'ng2-scroll-to-el';
 
 @NgModule({
     imports: [
         CommonsModule,
         HttpClientModule,
+        ScrollToModule.forRoot()
     ],
     declarations: [
        HomeComponent,
@@ -27,9 +28,7 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-b
        ContactComponent,
        FooterComponent,
        AppComponent,
-
     ],
-    bootstrap: [AppComponent],
-
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

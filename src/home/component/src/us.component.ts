@@ -3,25 +3,13 @@ import {trigger, transition, animate, state, style,keyframes} from "@angular/ani
 
 @Component({
     selector: 'us',
-    template: require('../template/us.component.html'),
-    animations: [
-        trigger('label', [
-            state('show', style({transform: 'translateX(0)'})),
-            transition('void => *', [
-                style({transform: 'translateX(-100%)'}),
-                animate(100)
-            ]),
-            transition('* => void', [
-                animate(100, style({transform: 'translateX(100%)'}))
-            ])
-        ])
-    ]
+    template: require('../template/us.component.html')
 })
 
 export class UsComponent implements OnInit{
 
     private selectedArea: string = "software";
-    private state:string;
+
 
     constructor() {
 
@@ -31,9 +19,5 @@ export class UsComponent implements OnInit{
         this.selectedArea = newSelected;
     }
 
-    ngOnInit(): void {
-        setTimeout( ()=> {
-           this.state = "show"
-        },500);
-    }
+    ngOnInit(): void {}
 }

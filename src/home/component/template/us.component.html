@@ -4,7 +4,7 @@
             <div class="col-sm-12 title-what-we-do">
                 <h1>¿Qué hacemos en <span class="underline_color_main">TechnoMind</span>?</h1>
                 <div class="container">
-                    <p [@label]="state">En TechnoMind nos dedicamos al <strong>desarrollo tecnológico</strong> en empresas y negocios, tenemos
+                    <p>En TechnoMind nos dedicamos al <strong>desarrollo tecnológico</strong> en empresas y negocios, tenemos
                         como objetivo la creación de sistemas que ayuden a mejorar el flujo de trabajo y comercialización
                         de tu negocio.</p>
                 </div>
@@ -26,7 +26,7 @@
                     <button (click)="selectArea('design')"><svg-icon src="src/svg/dibujo.svg"></svg-icon></button> <!-- change to english img names -->
                 </div>
             </div>
-            <div class="row us-services-row" *ngIf="selectedArea == 'software'">
+            <div class="row us-services-row" *ngIf="selectedArea == 'software'" id="software">
                 <div class="col-sm-6 texto">
                     <div class="container">
                         <br>
@@ -38,7 +38,7 @@
                     <img src="/src/img/software.jpg" alt="">
                 </div>
             </div>
-            <div class="row us-services-row" *ngIf="selectedArea == 'computer'">
+            <div class="row us-services-row" *ngIf="selectedArea == 'computer'" id="computer">
                 <div class="col-sm-6 texto">
                     <div class="container">
                         <br>
@@ -50,7 +50,7 @@
                     <img src="/src/img/IT.jpeg" alt="">
                 </div>
             </div>
-            <div class="row us-services-row" *ngIf="selectedArea == 'cell'">
+            <div class="row us-services-row" *ngIf="selectedArea == 'cell'" id="cell">
                 <div class="col-sm-6 texto">
                     <div class="container">
                         <br>
@@ -62,7 +62,7 @@
                     <img src="/src/img/mobile.jpg" alt="">
                 </div>
             </div>
-            <div class="row us-services-row" *ngIf="selectedArea == 'design'">
+            <div class="row us-services-row" *ngIf="selectedArea == 'design'" id="design">
                 <div class="col-sm-6 texto">
                     <div class="container">
                         <br>

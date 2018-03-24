@@ -9,8 +9,8 @@ import {LoadingComponent} from "./component/src/loading.component";
 // Route config let's you map routes to components
 const routes: Routes = [
     // map '/home' to the home screen
-    { path: 'home',component: HomeComponent},
-    { path: 'loading',component: LoadingComponent},
+    { path: 'home',component: HomeComponent, data: { animation: 'home' }},
+    { path: 'loading',component: LoadingComponent,  data: { animation: 'loading' }},
     { path: '',   redirectTo: '/loading', pathMatch : 'full'},
     { path: '**', redirectTo: '/loading', pathMatch:'full' }
 
