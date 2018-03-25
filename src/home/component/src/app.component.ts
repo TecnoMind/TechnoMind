@@ -13,7 +13,6 @@ const query = (s:any,a :any,o={optional:true})=>q(s,a,o);
             transition('* <=> *', [
                 /* order */
                 /* 1 */ query(':enter, :leave', style({ position: 'fixed', width:'100%' })),
-                /* 2 */ query('.block', style({ opacity: 0 })),
                 /* 3 */ group([  // block executes in parallel
                             query(':enter', [
                                 style({ transform: 'translateX(100%)' }),
@@ -25,12 +24,7 @@ const query = (s:any,a :any,o={optional:true})=>q(s,a,o);
                                 animate('500ms cubic-bezier(.75,-0.48,.26,1.52)',
                                 style({ transform: 'translateX(-100%)' }))
                             ]),
-                ]),
-                /* 4 */ query(':enter .block', stagger(400, [
-                    style({ transform: 'translateY(100px)' }),
-                    animate('1s ease-in-out',
-                        style({ transform: 'translateY(0px)', opacity: 1 })),
-                ])),
+                ])
             ])
         ])
     ]
