@@ -1,23 +1,21 @@
 import {Component, ElementRef, group, HostListener, OnInit} from "@angular/core";
-import {trigger, transition, animate, state, style, keyframes, query, stagger} from "@angular/animations";
+import {trigger, transition, animate, state, style, keyframes, query} from "@angular/animations";
 
 @Component({
     selector: 'us',
     template: require('../template/us.component.html'),
     animations:[
-        trigger('parentAnimation', [
-            transition('hide  => show', [
-                query('.test', style({
-                    opacity:0,
-                    transform:'translateY(-100%)'
-                })),
-                query('.test', stagger('500ms', [
-                    animate('100ms .1s ease-out', style({
-                        opacity: 1,
-                        transform:'translateY(100%)'
-                    }))
-                ]))
-            ]),
+        trigger('scrollAnimation', [
+            state('show', style({
+                opacity: 1,
+                transform: "translateY(100%)"
+            })),
+            state('hide',   style({
+                opacity: 0,
+                transform: "translateY(-100%)"
+            })),
+            transition('show => hide', animate('700ms ease-out')),
+            transition('hide => show', animate('700ms ease-in'))
         ])]
 })
 
